@@ -26,4 +26,5 @@ class Solution:
                     result.append(h+m)
         return result
 
+#test with input num=2
 print(Solution.readBinaryWatch(Solution, 2))
