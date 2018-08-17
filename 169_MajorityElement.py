@@ -1,5 +1,5 @@
 class Solution:
-    #O(1) time
+    #O(N) time
     def majorityElement(self, nums):
         """
         :type nums: List[int]
