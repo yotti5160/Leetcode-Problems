@@ -17,18 +17,13 @@ class Solution:
             for n in nowOn:
                 for i in range(4):
                     num=int(n[i])
-                    tmp=n[:i]+str((num+1)%10)+n[i+1:]
-                    if tmp==target:
-                        return output
-                    elif tmp not in visited:
-                        nextOn.append(tmp)
-                        visited.add(tmp)
-                    tmp=n[:i]+str((num-1)%10)+n[i+1:]
-                    if tmp==target:
-                        return output
-                    elif tmp not in visited:
-                        nextOn.append(tmp)
-                        visited.add(tmp)
+                    for k in [-1,1]:
+                        tmp=n[:i]+str((num+k)%10)+n[i+1:]
+                        if tmp==target:
+                            return output
+                        elif tmp not in visited:
+                            nextOn.append(tmp)
+                            visited.add(tmp)
             nowOn=nextOn
             output+=1
         return -1
