@@ -6,6 +6,7 @@ class Solution:
                 return
             if amount%coins[startIndex]==0:
                 self.ret=min(self.ret, nowCount+amount//coins[startIndex])
+                return
             if startIndex==l-1:
                 return
             for i in range(amount//coins[startIndex], -1, -1):
